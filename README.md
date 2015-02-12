@@ -14,6 +14,7 @@ Windows向けの開発環境を自動で構築するスクリプトです。
 	- [git-master](https://gist.github.com/mzp/1131618)
 	- [git-feature](https://gist.github.com/masaru-b-cl/5b461ffd4728ab9b61cb)
 	- [diff-highlight](https://github.com/git/git/tree/master/contrib/diff-highlight)
+	- [git-archive-diff](https://gist.github.com/masaru-b-cl/5ada3ccd4ad4627032ca)
 - [Vim（香り屋版）](http://www.kaoriya.net/software/vim/)
 	- [NeoBundle](https://github.com/Shougo/neobundle.vim)
 	- [hybrid.vim](https://github.com/w0ng/vim-hybrid)
@@ -23,3 +24,4 @@ Windows向けの開発環境を自動で構築するスクリプトです。
 
 ## 更新履歴
 - 1.0 初版
+- 1.1 git-archive-diffを追加

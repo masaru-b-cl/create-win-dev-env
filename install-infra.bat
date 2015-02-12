@@ -51,3 +51,4 @@ wget --no-check-certificate https://github.com/git/git/raw/master/contrib/diff-h
 wget --no-check-certificate https://gist.githubusercontent.com/masaru-b-cl/5b461ffd4728ab9b61cb/raw/bbd12fcd6928ef31f5ab3d7d7dc2b230f95202f8/git-feature
 wget --no-check-certificate https://gist.githubusercontent.com/masaru-b-cl/7038197/raw/fd9392748d0d5fba19af0122e845d04b6cfe2e9c/git-now
 wget --no-check-certificate https://gist.githubusercontent.com/mzp/1131618/raw/900b1ed139f7ec3ded026eb09e97816d6f446b99/gistfile1.txt -O git-master
+wget --no-check-certificate https://gist.githubusercontent.com/masaru-b-cl/5ada3ccd4ad4627032ca/raw/b7217c3080d95bef1c4729019b34fe9efe5db70e/git-archive-diff
