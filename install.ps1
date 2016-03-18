@@ -1,4 +1,4 @@
-﻿$ScriptDir = (Convert-Path .)
+$CurrentDir = (Convert-Path .)
 
 Set-ExecutionPolicy Bypass -Scope Process -Force
 
@@ -49,12 +49,9 @@ git clone -b windows https://github.com/masaru-b-cl/dotfiles.git
 .\dotfiles\install.bat
 
 # install MyricaM
-$FontFolder = $env:USERPROFILE + "\Downloads\font"
-New-Item $FontFolder -ItemType Directory
-Set-Location $FontFolder
-Invoke-WebRequest https://github.com/tomokuni/Myrica/raw/master/product/MyricaM.TTC -UseBasicParsing -OutFile MyricaM.TTC
-$MyricaPath = $FontFolder + "\MyricaM.TTC"
-$InstallFontScriptPath = $ScriptDir + "\install-font.vbs"
-cscript $InstallFontScriptPath $MyricaPath
+$MyricaPath = $env:TEMP + "\MyricaM.TTC"
+Invoke-WebRequest https://github.com/tomokuni/Myrica/raw/master/product/MyricaM.TTC -UseBasicParsing -OutFile $MyricaPath
+$FONTS = 0x14$objShell = New-Object -ComObject Shell.Application$objFolder = $objShell.Namespace($FONTS)
+$objFolder.CopyHere($MyricaPath)
 
-Set-Location $ScriptDir
+Set-Location $CurrentDir
