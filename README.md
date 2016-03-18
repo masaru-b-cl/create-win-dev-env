@@ -1,9 +1,15 @@
-Create Windows Development Environment
+iCreate Windows Development Environment
 =====
 Windows向けの開発環境を自動で構築するスクリプトです。
 
 ## 実行方法
-ダウンロードしたzipファイルを展開し、エクスプローラー等にて`install.bat`ファイルを右クリックし、「管理者として実行」します。
+
+1. ダウンロードしたzipファイルを展開する
+2. Powershellを管理者として実行し、上記展開フォルダーで以下のコマンドを実行する
+
+```powershell
+PS path\to\create-win-dev-env> (Get-Content .\install.ps1) | iex
+```
 
 ## インストールする製品
 
@@ -17,11 +23,17 @@ Windows向けの開発環境を自動で構築するスクリプトです。
 	- [git-archive-diff](https://gist.github.com/masaru-b-cl/5ada3ccd4ad4627032ca)
 - [Vim（香り屋版）](http://www.kaoriya.net/software/vim/)
 	- [NeoBundle](https://github.com/Shougo/neobundle.vim)
-	- [hybrid.vim](https://github.com/w0ng/vim-hybrid)
+	- [Molokai Color Scheme for Vim](https://github.com/tomasr/molokai.git)
+	- [neocomplete](https://github.com/Shougo/neocomplete.git)
+	- [Neosnippet](https://github.com/Shougo/neosnippet.vim)
+	- [Neosnippet-snippets](https://github.com/Shougo/neosnippet-snippets)
 - [WinMerge](http://winmerge.org/?lang=ja)
-- [Ricty Diminished](https://github.com/yascentur/RictyDiminished)
-- [Wget](http://users.ugent.be/~bpuype/wget/)
+- [MyricaM](http://myrica.estable.jp/myricamhistry/)
+- [My dotfiles](https://github.com/masaru-b-cl/dotfiles/tree/windows)
+	- Git for Windows
+	- Vim
 
 ## 更新履歴
+- 2.0 インストールスクリプトをPowerShellに変更
 - 1.0 初版
 - 1.1 git-archive-diffを追加
