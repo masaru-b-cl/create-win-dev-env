@@ -8,7 +8,7 @@ Windows向けの開発環境を自動で構築するスクリプトです。
 2. Powershellを管理者として実行し、上記展開フォルダーで以下のコマンドを実行する
 
 ```powershell
-PS path\to\create-win-dev-env> (Get-Content -Raw .\install.ps1) | iex
+PS C:\> (iwr -UseBasicParsing https://raw.githubusercontent.com/masaru-b-cl/create-win-dev-env/master/install.ps1) | iex
 ```
 
 ## インストールする製品
@@ -34,6 +34,7 @@ PS path\to\create-win-dev-env> (Get-Content -Raw .\install.ps1) | iex
 	- Vim
 
 ## 更新履歴
+- 2.1 フォントのインストールもPowerShellで行うように変更
 - 2.0 インストールスクリプトをPowerShellに変更
 - 1.0 初版
 - 1.1 git-archive-diffを追加
