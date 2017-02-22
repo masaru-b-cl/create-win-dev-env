@@ -33,9 +33,13 @@ New-Item $GitRepository -ItemType Directory
 cinst -y winmerge-jp
 
 # install Vim
-Set-Location $GitRepository
-git clone https://github.com/masaru-b-cl/Chocolatey-KaoriyaVim.git
-cinst -y KaoriyaVim -source Chocolatey-KaoriyaVim
+Set-Location $BinFolder
+New-Item vim -ItemType Directory
+Set-Location vim
+Invoke-WebRequest https://github.com/koron/netupvim/releases/download/v1.2/netupvim-v1.2.zip -UseBasicParsing -OutFile netupvim.zip
+$Env:Path += ";" + $Env:ProgramFiles + "\7-zip"
+7z.exe x .\netupvim.zip
+.\UPDATE.bat
 
 # configure Vim | NeoBundle
 $VimBundleFolder = $env:USERPROFILE + "\.vim\bundle"
