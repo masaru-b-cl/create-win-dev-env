@@ -18,7 +18,7 @@ git config --global core.autocrlf false
 # install Git subcommands
 $BinFolder = $env:USERPROFILE + "\bin"
 New-Item $BinFolder -ItemType Directory
-cd $BinFolder
+Set-Location $BinFolder
 Invoke-WebRequest https://github.com/git/git/raw/master/contrib/diff-highlight/diff-highlight -UseBasicParsing -OutFile diff-highlight
 Invoke-WebRequest https://gist.githubusercontent.com/masaru-b-cl/5b461ffd4728ab9b61cb/raw/bbd12fcd6928ef31f5ab3d7d7dc2b230f95202f8/git-feature -UseBasicParsing -OutFile git-feature
 Invoke-WebRequest https://gist.githubusercontent.com/masaru-b-cl/7038197/raw/fd9392748d0d5fba19af0122e845d04b6cfe2e9c/git-now -UseBasicParsing -OutFile git-now
@@ -44,7 +44,7 @@ $Env:Path += ";" + $Env:ProgramFiles + "\7-zip"
 # configure Vim | NeoBundle
 $VimBundleFolder = $env:USERPROFILE + "\.vim\bundle"
 New-Item $VimBundleFolder -ItemType Directory
-cd $VimBundleFolder
+Set-Location $VimBundleFolder
 git clone git://github.com/Shougo/neobundle.vim
 
 # dotfiles
